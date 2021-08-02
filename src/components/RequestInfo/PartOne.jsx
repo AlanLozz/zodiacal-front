@@ -4,8 +4,20 @@ const PartOne = ({ formData, setForm }) => {
     return (
         <>
             <div className="form-group">
-                <label htmlFor="nombrePila">¿Cuál es tu signo zodiacal?</label>
-                <select name="signoZodiacal" className="form-control" onChange={setForm} autoFocus>
+                <label htmlFor="">¿Cúal es tu edad?</label>
+                <input type="number" name="edad" value={formData.edad} onChange={setForm} className="form-control" placeholder="Ej. 23" autoFocus/>
+            </div>
+            <div className="form-group">
+                <label htmlFor="">¿Cúal es tu genero?</label>
+                <select name="genero" onChange={setForm} className="form-control">
+                    <option value="">Seleccionar</option>
+                    <option value="masculino" selected={formData.genero === 'masculino'}>Masculino</option>
+                    <option value="femenino" selected={formData.genero === 'femenino'}>Femenino</option>
+                </select>
+            </div>
+            <div className="form-group">
+                <label htmlFor="">¿Cuál es tu signo zodiacal?</label>
+                <select name="signoZodiacal" className="form-control" onChange={setForm}>
                     <option value="">Seleccionar</option>
                     <option value="aries" selected={formData.signoZodiacal == 'aries'}>Aries</option>
                     <option value="tauro" selected={formData.signoZodiacal == 'tauro'}>Tauro</option>

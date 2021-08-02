@@ -33,7 +33,13 @@ const Index = () => {
 
     const handleChangeForm = e => {
         const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
+        if(name === 'edad') {
+            if(value.length <= 2) {
+                setFormData({ ...formData, [name]: value });
+            }
+        } else {
+            setFormData({ ...formData, [name]: value });
+        }
     };
 
     const submitEvent = e => {

@@ -18,7 +18,9 @@ const Log = ({data, getData}) => {
             <table className="table table-hover mt-2">
                 <thead className="thead-dark">
                     <tr>
-                        <th>Real</th>
+                        <th>Genero</th>
+                        <th>Edad</th>
+                        <th>Signo Real</th>
                         <th>Característica</th>
                         <th>Caracter</th>
                         <th>Amor</th>
@@ -31,7 +33,9 @@ const Log = ({data, getData}) => {
                             data.map((fila, index) => {
                                 return (
                                     <tr key={index}>
-                                        <th>{fila.signoZodiacal}</th>
+                                        <td>{fila.genero}</td>
+                                        <td>{fila.edad}</td>
+                                        <td>{fila.signoZodiacal}</td>
                                         <td>{fila.caracteristica}</td>
                                         <td>{fila.caracter}</td>
                                         <td>{fila.relacionesAmorosas}</td>

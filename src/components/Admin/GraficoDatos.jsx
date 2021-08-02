@@ -14,7 +14,7 @@ const GraficoDatos = ({data, getData}) => {
                                         {
                                             data.length > 0 &&
                                                 data.map((data, index)=>{
-                                                    return <button className="list-group-item list-group-item-action" key={index}>Persona {index + 1}</button>
+                                                    return <button className="list-group-item list-group-item-action" key={index}>Persona {index + 1} {data.signoZodiacal}</button>
                                                 })
                                         }
                                     </div>
